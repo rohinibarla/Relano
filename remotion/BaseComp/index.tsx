@@ -62,7 +62,7 @@ const BaseComp = ({
         <Series.Sequence
           durationInFrames={fps * 1.5}
           className="text-white"
-          name="Vercel/NextJS"
+          name="Coding Bridge Course"
         >
           <SlidingDoors>
             <First className="bg-black">
@@ -75,7 +75,7 @@ const BaseComp = ({
           durationInFrames={fps * 1.5}
           offset={-20}
           className="text-white"
-          name={"13.4.2"}
+          name={"June 5th 2023"}
         >
           <SlidingDoors>
             <First className="bg-blue-500">
@@ -88,7 +88,7 @@ const BaseComp = ({
           durationInFrames={fps * 3}
           offset={-20}
           className="text-black"
-          name={"Vercel/NextJS | 13.4.2"}
+          name={"Coding Bridge Course | by Enhance42"}
         >
           <SlidingDoors>
             <First className="bg-white text-center">
@@ -104,14 +104,14 @@ const BaseComp = ({
           durationInFrames={fps * 3}
           offset={-20}
           className="text-white"
-          name={"Here are the top changes!"}
+          name={"Your first 3 steps!"}
         >
           <SlidingDoors>
             <First className="bg-black text-center">
               <Star6Sided />
               <Star4Sided />
               <h1 className="text-9xl font-black">
-                {"Here are the top changes!"}
+                {"Your first 3 steps!"}
               </h1>
             </First>
           </SlidingDoors>
@@ -186,7 +186,7 @@ const BaseComp = ({
           durationInFrames={fps * 3}
           offset={-30}
           className="z-0"
-          name="Checkout the latest release"
+          name="Waiting for the first class"
         >
           <Series.Sequence
             durationInFrames={fps * 1.5}
@@ -196,9 +196,9 @@ const BaseComp = ({
             <SlidingDoors>
               <First className="bg-blue-500 text-white flex flex-col items-center justify-center text-center">
                 <h1 className="text-9xl font-black">
-                  Checkout the latest release
+                  Waiting for the first class
                 </h1>
-                <p className="text-5xl mt-10 text-white/70">On GitHub</p>
+                <p className="text-5xl mt-10 text-white/70">On June 5th 2023</p>
               </First>
             </SlidingDoors>
           </Series.Sequence>
@@ -208,7 +208,7 @@ const BaseComp = ({
           durationInFrames={fps * 3}
           offset={-20}
           className="text-black"
-          name={"Vercel/NextJS | 13.4.2"}
+          name={"Coding Bridge Course | July 5th 2023"}
         >
           <FadeOutExit>
             <SlidingDoors>

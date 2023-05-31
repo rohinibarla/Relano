@@ -1,3 +1,27 @@
+# To make class summary videos
+
+## Steps to first configure on dev machine
+1. Install the `remotion` using the command.
+```
+npm init video
+```
+
+2. Install the needed packages
+```
+npm install
+```
+
+3. To generate the video
+```
+npm run render
+```
+
+You can see the video in the `out` folder.
+
+4. Now just change the content in file `videoContent.tsx` inside `script` folder to generate the necessary video. In this file all the confirations like backgroud music everything can be decided. Going forward just changing this one file content must generate the necessary video.
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

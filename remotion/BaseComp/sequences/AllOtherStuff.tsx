@@ -10,7 +10,7 @@ export default function AllThingsWeAddedSequence({ list }: { list: string[] }) {
       <div className="flex-1">
         {/* <Sequence from={fps * -0.5}> */}
         <WordLevelOpacityReveal>
-          {"Here's all the stuff added!"}
+          {"Here's all the topics covered!"}
         </WordLevelOpacityReveal>
         {/* </Sequence> */}
       </div>
