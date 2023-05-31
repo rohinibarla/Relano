@@ -10,11 +10,11 @@ import AllThingsWeAddedSequence from "./sequences/AllOtherStuff";
 import FadeOutExit from "./components/FadeOutExit";
 import Star6Sided from "./assets/Star6Sided";
 import Star4Sided from "./assets/Star4Sided";
-import clsx from "clsx";
+import clsx from "clsx" ;
 import ConditionalWrap from "./components/ConditionalWrap";
 import SlideExitToTop from "./components/SlideExitToTop";
 import FadingOutAudio from "./sequences/FadingOutAudio";
-
+import {IntroTitle, IntroCaption, Introduction, Conclusion, ConclusionCaption, EndingTitle, EndingCaption} from "../../script/VideoContent" ;
 const parsedPropsSchemaBase = {
   topChanges: z.array(z.object({ title: z.string(), description: z.string() })),
   allChanges: z.array(z.string()),
@@ -25,7 +25,7 @@ export type ParsedPropsSchema = z.infer<typeof parsedPropsSchema>;
 export const baseCompSchema = z.object({
   repositorySlug: z.string(),
   releaseTag: z.string(),
-  openaiGeneration: z.string(),
+  Content: z.string(),
 
   ...parsedPropsSchemaBase,
 });
@@ -62,11 +62,11 @@ const BaseComp = ({
         <Series.Sequence
           durationInFrames={fps * 1.5}
           className="text-white"
-          name="Coding Bridge Course"
-        >
+          name="enhance42"
+        > {/* name is not used */}
           <SlidingDoors>
             <First className="bg-black">
-              <h1 className="text-9xl font-black">{repositorySlug}</h1>
+              <h1 className="text-9xl font-black">{IntroTitle}</h1>
             </First>
           </SlidingDoors>
         </Series.Sequence>
@@ -75,11 +75,11 @@ const BaseComp = ({
           durationInFrames={fps * 1.5}
           offset={-20}
           className="text-white"
-          name={"June 5th 2023"}
-        >
+          name={"13.4.2"}
+        > {/* name is not used */}
           <SlidingDoors>
             <First className="bg-blue-500">
-              <h1 className="text-9xl font-black">{releaseTag}</h1>
+              <h1 className="text-9xl font-black">{IntroCaption}</h1>
             </First>
           </SlidingDoors>
         </Series.Sequence>
@@ -88,13 +88,13 @@ const BaseComp = ({
           durationInFrames={fps * 3}
           offset={-20}
           className="text-black"
-          name={"Coding Bridge Course | by Enhance42"}
-        >
+          name={"Vercel/NextJS | 13.4.2"}
+        >     {/* name is not used */ }
           <SlidingDoors>
             <First className="bg-white text-center">
               <div className="flex items-center justify-center gap-10 flex-col">
-                <h1 className="text-9xl font-black">{repositorySlug}</h1>
-                <h1 className="text-5xl font-bold">{releaseTag}</h1>
+                <h1 className="text-9xl font-black">{IntroTitle}</h1>
+                <h1 className="text-5xl font-bold">{IntroCaption}</h1>
               </div>
             </First>
           </SlidingDoors>
@@ -104,14 +104,14 @@ const BaseComp = ({
           durationInFrames={fps * 3}
           offset={-20}
           className="text-white"
-          name={"Your first 3 steps!"}
-        >
+          name={"Let's code"}
+        > {/* name is not used */}
           <SlidingDoors>
             <First className="bg-black text-center">
               <Star6Sided />
               <Star4Sided />
               <h1 className="text-9xl font-black">
-                {"Your first 3 steps!"}
+                {Introduction}
               </h1>
             </First>
           </SlidingDoors>
@@ -186,7 +186,7 @@ const BaseComp = ({
           durationInFrames={fps * 3}
           offset={-30}
           className="z-0"
-          name="Waiting for the first class"
+          name="Checkout the latest release"
         >
           <Series.Sequence
             durationInFrames={fps * 1.5}
@@ -196,9 +196,9 @@ const BaseComp = ({
             <SlidingDoors>
               <First className="bg-blue-500 text-white flex flex-col items-center justify-center text-center">
                 <h1 className="text-9xl font-black">
-                  Waiting for the first class
+                  {Conclusion}
                 </h1>
-                <p className="text-5xl mt-10 text-white/70">On June 5th 2023</p>
+                <p className="text-5xl mt-10 text-white/70">{ConclusionCaption}</p>
               </First>
             </SlidingDoors>
           </Series.Sequence>
@@ -208,14 +208,14 @@ const BaseComp = ({
           durationInFrames={fps * 3}
           offset={-20}
           className="text-black"
-          name={"Coding Bridge Course | July 5th 2023"}
-        >
+          name={"enhance42"}
+        > {/* name is not used */}
           <FadeOutExit>
             <SlidingDoors>
               <First className="bg-white text-center">
                 <div className="flex items-center justify-center gap-10 flex-col">
-                  <h1 className="text-9xl font-black">{repositorySlug}</h1>
-                  <h1 className="text-5xl font-bold">{releaseTag}</h1>
+                  <h1 className="text-9xl font-black">{EndingTitle}</h1>
+                  <h1 className="text-5xl font-bold">{EndingCaption}</h1>
                 </div>
               </First>
             </SlidingDoors>
