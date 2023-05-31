@@ -22,6 +22,10 @@ You can see the video in the `out` folder.
 
 
 
+https://github.com/rohinibarla/Relano/assets/18045055/9d6a4fba-3dc2-4bf1-a49a-6a660b7ad165
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
