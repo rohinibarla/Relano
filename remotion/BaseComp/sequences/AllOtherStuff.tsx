@@ -1,6 +1,7 @@
 import { AbsoluteFill, Sequence, useVideoConfig } from "remotion";
 import WordLevelOpacityReveal from "../components/WordLevelOpacityReveal";
 import ScrollingTextList from "../components/ScrollingTextList";
+import {ScrollTextTitle} from "../../../script/VideoContent";
 
 export default function AllThingsWeAddedSequence({ list }: { list: string[] }) {
   const { fps } = useVideoConfig();
@@ -10,7 +11,7 @@ export default function AllThingsWeAddedSequence({ list }: { list: string[] }) {
       <div className="flex-1">
         {/* <Sequence from={fps * -0.5}> */}
         <WordLevelOpacityReveal>
-          {"Here's all the topics covered!"}
+          {ScrollTextTitle}
         </WordLevelOpacityReveal>
         {/* </Sequence> */}
       </div>

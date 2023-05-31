@@ -4,6 +4,8 @@ import {
   delayRender,
   continueRender,
 } from "remotion";
+
+import Content from "../script/VideoContent";
 import BaseComp, { ParsedPropsSchema, BaseCompProps } from "./BaseComp";
 import { useMemo, useState } from "react";
 import { parse } from "yaml";
@@ -15,7 +17,7 @@ export default function Comp() {
   const [durationInFrames, setDurationInFrames] = useState(30 * 3);
   const { topChanges, allChanges } = useMemo((): ParsedPropsSchema => {
     const parsed = parse(
-      inputProps.openaiGeneration ?? openaiGeneration
+      inputProps.Content ?? Content
     ) as unknown as ParsedPropsSchema;
 
     const duration = 81 * parsed.topChanges.length + 555;
@@ -25,13 +27,13 @@ export default function Comp() {
     continueRender(handle);
 
     console.log("Props", {
-      repositorySlug: "Coding Bridge Course",
-      releaseTag: "July 5th 2023",
+          repositorySlug: "Checking", // unused  data
+          releaseTag: "30/1/23",     // unused data
       parsed,
-      openaiGeneration,
+      Content,
     });
     return parsed;
-  }, [handle, inputProps.openaiGeneration]);
+  }, [handle, inputProps.Content]);
 
   return (
     <>
@@ -52,11 +54,11 @@ export default function Comp() {
         height={1080}
         id="basecomp"
         defaultProps={{
-          repositorySlug: "Coding Bridge Course",
-          releaseTag: "June 5th 2023",
+          repositorySlug: "Checking", // unused data
+          releaseTag: "30/1/23", // unused data
           topChanges,
           allChanges,
-          openaiGeneration,
+          Content,
           // topChanges: [
           //   {
           //     title: "Some awesome feature",
@@ -175,28 +177,3 @@ export default function Comp() {
   );
 }
 
-const openaiGeneration = `topChanges:
-- title: Open https://bridge.e42.dev
-  description: Open our course website
-- title: Type command 'code'
-  description: To open the replit website
-- title: Now signup using google account
-  description: create replit account
-
-allChanges:
-- Using the commands
-- Creating new commands
-- Variable
-- function parameters
-- function returns sankya or gadidha_guddu
-- main function, from which everything starts. Return program_execution_status.
-- Control flow
-- Data Flow
-- function, declaration, definition, calling. // new commands
-- control statements, if-else, while, for, break
-- Arithmetic operations, assignment.
-- relational operators
-- Errors.
-- Compiler, code, executable.
-- Header files, distribution of code.
-- Reading from user` as const;

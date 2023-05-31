@@ -1,12 +1,14 @@
 import { Audio, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
+import {BackgroundMusic} from "../../../script/VideoContent"
 
 export default function FadingOutAudio() {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
-
+ 
   return (
     <Audio
-      src="https://audiocdn.epidemicsound.com/ES_ITUNES/Zy0ALC_Ganja/ES_Ganja.mp3"
+    
+      src={BackgroundMusic}
       startFrom={20 * fps}
       volume={
         // Slowly fade out
